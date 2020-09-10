@@ -1,10 +1,10 @@
-import React from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import ViewUser from "../ViewUser/ViewUser";
 import "./Compare.css";
 
-class PlayerInput extends React.Component {
+class PlayerInput extends Component {
   constructor(props) {
     super(props);
 
@@ -61,7 +61,7 @@ PlayerInput.prototypes = {
   onSubmit: PropTypes.func.isRequired,
 };
 
-class Compare extends React.Component {
+class Compare extends Component {
   constructor(props) {
     super(props);
 

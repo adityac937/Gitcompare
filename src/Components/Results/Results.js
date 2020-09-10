@@ -4,7 +4,6 @@ import api from "../Api/api";
 import PropTypes from "prop-types";
 import ViewUser from "../ViewUser/ViewUser";
 import Spinner from "../Spinner/Spinner";
-const queryString = require("query-string");
 
 function Profile(props) {
   let info = props.info;
@@ -59,6 +58,8 @@ class Results extends React.Component {
     };
   }
   componentDidMount() {
+    const queryString = require("query-string");
+
     let players = queryString.parse(this.props.location.search);
 
     api.battle([players.playerOneName, players.playerTwoName]).then(
